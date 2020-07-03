@@ -41,11 +41,11 @@ In addition pipelines for following will need to be developed:
 
 The pipelines work will necessitate some minor additional API additions and change to the following components:
 
-#### biocache-service
+### biocache-service
 [experimental/pipelines branch](https://github.com/AtlasOfLivingAustralia/biocache-service/tree/experimental/pipelines) 
 The aim for this proof of concept is to make very minimal changes to biocache-service, maintain the existing API and have no impact on existing services and applications.
 
-#### ala-namematching-service
+### ala-namematching-service
 A simple **drop wizard wrapper around the [ala-name-matching](https://github.com/AtlasOfLivingAustralia/ala-name-matching) library** has been prototyped to support integration with pipelines.
  
 ## Getting started
@@ -72,14 +72,14 @@ and then setup the collection using the following script:
 `./update-solr-config.sh`
 You can test it by checking this url: http://localhost:8983
       
-### Setting up la-pipeline 
+### Setting up la-pipelines
   
 1. Download shape files from [here](https://pipelines-shp.s3-ap-southeast-2.amazonaws.com/pipelines-shapefiles.zip) and expand into `/data/pipelines-shp` directory
 1. Download a test darwin core archive (e.g. https://archives.ala.org.au/archives/gbif/dr893/dr893.zip) and expand it into `/data/biocache-load` e.g. `/data/biocache-load/dr893`
 1. Create the following directory `/data/pipelines-data`
 1. Build with maven `mvn clean install`
 
-### Running la-pipeline
+### Running la-pipelines
 
 1. `cd scripts`
 1. To convert DwCA to AVRO, run `./dwca-avro.sh dr893`
