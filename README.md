@@ -84,7 +84,6 @@ You can test it by checking this url: http://localhost:8983
 1. Create the following directory `/data/pipelines-data`
 1. Build with maven `mvn clean install`
 
-
 ### Running la-pipeline
 1. `cd scripts`
 1. To convert DwCA to AVRO, run `./dwca-avro.sh dr893`
@@ -96,12 +95,9 @@ You can test it by checking this url: http://localhost:8983
     1. `./sample-avro-embedded.sh dr893`
 1. To setup SOLR:
     1. Install docker
-    1. Follow the instructions in [solr8/docker/README.md](solr/docker/solr8/README.md)
     1. Run `docker-compose -f solr8.yml up -d`
-    1. Run `./update-solr-config.sh`
-1. To index, run `./index-java.sh dr893`
-
-1. To index, run `./index.sh dr893`
+    1. Run `cd solr/scripts` and  then run ' `./update-solr-config.sh`
+1. To index, run `./index-spark-embedded.sh dr893`
 
 ## Integration Tests
 
